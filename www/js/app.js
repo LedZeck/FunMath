@@ -28,7 +28,6 @@ angular.module('starter', ['ionic'])
   function applicationRun(){
     $scope.firstTerm = Math.floor((Math.random() * 1000) - 1);
     $scope.secondTerm = Math.floor((Math.random() * 1000) + 1);
-    $scope.score = 0;
     var operation = Math.floor((Math.random() * 4) + 1);
     var falseResult = Math.floor((Math.random() * 10000) - 1);
     var compareParameter = Math.floor((Math.random() * 2) + 1);
@@ -42,24 +41,22 @@ angular.module('starter', ['ionic'])
         $scope.trueResult = falseResult;
       }
       $scope.verify = function(viewParam){
-        console.log(viewParam);
         var choice = viewParam;
-        console.log(choice);
         if ((compareParameter == 1) && choice){
           $scope.score += 1;
-          
+
         }
         else if (compareParameter == 1 && choice == false) {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
         else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
-          
+
         }
         else {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
       };
     }
@@ -72,24 +69,22 @@ angular.module('starter', ['ionic'])
         $scope.trueResult = falseResult;
       }
       $scope.verify = function(viewParam){
-        console.log(viewParam);
         var choice = viewParam;
-        console.log(choice);
         if ((compareParameter == 1) && choice){
           $scope.score += 1;
-          
+
         }
         else if (compareParameter == 1 && choice == false) {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
         else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
-          
+
         }
         else {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
       };
     }
@@ -102,23 +97,23 @@ angular.module('starter', ['ionic'])
         $scope.trueResult = falseResult;
       }
       $scope.verify = function(viewParam){
-  
+
         var choice = viewParam
         if ((compareParameter == 1) && choice){
           $scope.score += 1;
-          
+
         }
         else if (compareParameter == 1 && choice == false) {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
         else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
-          
+
         }
         else {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
       };
     }
@@ -131,23 +126,23 @@ angular.module('starter', ['ionic'])
         $scope.trueResult = falseResult;
       }
       $scope.verify = function(viewParam){
-  
+
         var choice = viewParam
         if ((compareParameter == 1) && choice){
           $scope.score += 1;
-          
+
         }
         else if (compareParameter == 1 && choice == false) {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
         else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
-          
+
         }
         else {
-          $scope.score = 0;
-          
+          $scope.score += 0;
+
         }
       };
     }
