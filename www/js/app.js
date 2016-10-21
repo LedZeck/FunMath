@@ -24,147 +24,134 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('mathCtrl', ['$scope', function($scope){
-  $scope.firstTerm = Math.floor((Math.random() * 1000) - 1);
-  $scope.secondTerm = Math.floor((Math.random() * 1000) + 1);
-  $scope.validate = 0;
-  var operation = Math.floor((Math.random() * 4) + 1);
-  var falseResult = Math.floor((Math.random() * 10000) - 1);
-  var compareParameter = Math.floor((Math.random() * 2) + 1);
+  $scope.score = 0;
+  function applicationRun(){
+    $scope.firstTerm = Math.floor((Math.random() * 1000) - 1);
+    $scope.secondTerm = Math.floor((Math.random() * 1000) + 1);
+    $scope.score = 0;
+    var operation = Math.floor((Math.random() * 4) + 1);
+    var falseResult = Math.floor((Math.random() * 10000) - 1);
+    var compareParameter = Math.floor((Math.random() * 2) + 1);
 
-  if (operation == 1) {
-    $scope.operationSet = "+";
-    if (compareParameter == 1){
-      $scope.trueResult = $scope.firstTerm + $scope.secondTerm;
+    if (operation == 1) {
+      $scope.operationSet = "+";
+      if (compareParameter == 1){
+        $scope.trueResult = $scope.firstTerm + $scope.secondTerm;
+      }
+      if (compareParameter == 2){
+        $scope.trueResult = falseResult;
+      }
+      $scope.verify = function(viewParam){
+        console.log(viewParam);
+        var choice = viewParam;
+        console.log(choice);
+        if ((compareParameter == 1) && choice){
+          $scope.score += 1;
+          
+        }
+        else if (compareParameter == 1 && choice == false) {
+          $scope.score = 0;
+          
+        }
+        else if (compareParameter == 2 && choice == false) {
+          $scope.score += 1;
+          
+        }
+        else {
+          $scope.score = 0;
+          
+        }
+      };
     }
-    if (compareParameter == 2){
-      $scope.trueResult = falseResult;
+    else if (operation == 2) {
+      $scope.operationSet = "-";
+      if (compareParameter == 1){
+        $scope.trueResult = $scope.firstTerm - $scope.secondTerm;
+      }
+      if (compareParameter == 2){
+        $scope.trueResult = falseResult;
+      }
+      $scope.verify = function(viewParam){
+        console.log(viewParam);
+        var choice = viewParam;
+        console.log(choice);
+        if ((compareParameter == 1) && choice){
+          $scope.score += 1;
+          
+        }
+        else if (compareParameter == 1 && choice == false) {
+          $scope.score = 0;
+          
+        }
+        else if (compareParameter == 2 && choice == false) {
+          $scope.score += 1;
+          
+        }
+        else {
+          $scope.score = 0;
+          
+        }
+      };
     }
-    $scope.verify = function(viewParam){
-      console.log(viewParam);
-      var choice = viewParam;
-      console.log(choice);
-      if ((compareParameter == 1) && choice){
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
+    else if (operation == 3) {
+      $scope.operationSet = "x";
+      if (compareParameter == 1){
+        $scope.trueResult = $scope.firstTerm * $scope.secondTerm;
       }
-      else if (compareParameter == 1 && choice == false) {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
+      if (compareParameter == 2){
+        $scope.trueResult = falseResult;
       }
-      else if (compareParameter == 2 && choice == false) {
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-    };
-  }
-  else if (operation == 2) {
-    $scope.operationSet = "-";
-    if (compareParameter == 1){
-      $scope.trueResult = $scope.firstTerm - $scope.secondTerm;
+      $scope.verify = function(viewParam){
+  
+        var choice = viewParam
+        if ((compareParameter == 1) && choice){
+          $scope.score += 1;
+          
+        }
+        else if (compareParameter == 1 && choice == false) {
+          $scope.score = 0;
+          
+        }
+        else if (compareParameter == 2 && choice == false) {
+          $scope.score += 1;
+          
+        }
+        else {
+          $scope.score = 0;
+          
+        }
+      };
     }
-    if (compareParameter == 2){
-      $scope.trueResult = falseResult;
+    else if (operation == 4) {
+      $scope.operationSet = "÷";
+      if (compareParameter == 1){
+        $scope.trueResult = $scope.firstTerm / $scope.secondTerm;
+      }
+      if (compareParameter == 2){
+        $scope.trueResult = falseResult;
+      }
+      $scope.verify = function(viewParam){
+  
+        var choice = viewParam
+        if ((compareParameter == 1) && choice){
+          $scope.score += 1;
+          
+        }
+        else if (compareParameter == 1 && choice == false) {
+          $scope.score = 0;
+          
+        }
+        else if (compareParameter == 2 && choice == false) {
+          $scope.score += 1;
+          
+        }
+        else {
+          $scope.score = 0;
+          
+        }
+      };
     }
-    $scope.verify = function(viewParam){
-      console.log(viewParam);
-      var choice = viewParam;
-      console.log(choice);
-      if ((compareParameter == 1) && choice){
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 1 && choice == false) {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 2 && choice == false) {
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-    };
-  }
-  else if (operation == 3) {
-    $scope.operationSet = "x";
-    if (compareParameter == 1){
-      $scope.trueResult = $scope.firstTerm * $scope.secondTerm;
-    }
-    if (compareParameter == 2){
-      $scope.trueResult = falseResult;
-    }
-    $scope.verify = function(viewParam){
-      console.log(viewParam);
-      var choice = viewParam;
-      console.log(choice);
-      if ((compareParameter == 1) && choice){
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 1 && choice == false) {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 2 && choice == false) {
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-    };
-  }
-  else if (operation == 4) {
-    $scope.operationSet = "÷";
-    if (compareParameter == 1){
-      $scope.trueResult = $scope.firstTerm / $scope.secondTerm;
-    }
-    if (compareParameter == 2){
-      $scope.trueResult = falseResult;
-    }
-    $scope.verify = function(viewParam){
-      console.log(viewParam);
-      var choice = viewParam;
-      console.log(choice);
-      if ((compareParameter == 1) && choice){
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 1 && choice == false) {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-      else if (compareParameter == 2 && choice == false) {
-        console.log(choice);
-        $scope.validate += 1;
-        console.log($scope.validate);
-      }
-      else {
-        console.log(choice);
-        $scope.validate = 0;
-        console.log($scope.validate);
-      }
-    };
-  }
+  };
+  applicationRun();
+
 }])
