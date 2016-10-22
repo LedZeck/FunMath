@@ -15,7 +15,7 @@
           .catch(err => console.log('Error', err));
       }
     </script>-->
-
+     <link href="lib/animate.css/animate.min.css" rel="stylesheet">
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -40,11 +40,11 @@
       </ion-header-bar>
       <ion-content ng-controller="mathCtrl">
         <div class="row responsive-sm">
-          <ion-content>
+          <ion-content class="equation-animate">
               <div class="item center">
                 True or False?
               </div>
-              <div class="list list-inset center">
+              <div class="list list-inset center animated bounceInLeft">
                   <div class="item item-positive">
                     {{firstTerm}}
                   </div>
