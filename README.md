@@ -3,7 +3,7 @@
 
 
 ###To execute locally:
-Make sure that you have an Ionic/Cordova environment working correctly :)
+Make sure that you have an Ionic/Cordova environment working correctly! :)</br>
   1. Fork/clone the repository;
   2. Run `npm install` (to download the project dependencies);
   3. Run `ionic serve`;
