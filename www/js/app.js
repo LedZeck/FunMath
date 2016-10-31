@@ -24,8 +24,8 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('mathCtrl', ['$scope','$timeout', function ($scope,$timeout) {
+  $scope.bool = true;
   $scope.score = 0;
-  $scope.show_page = false;
   $scope.list_items = [];
   $timeout(function() {
       $scope.list_items = [
@@ -158,9 +158,14 @@ angular.module('starter', ['ionic'])
         {text:$scope.trueResult,color:"calm"},
         {text:$scope.score,color:"calm"}
         ];
+        $scope.bool = false;
+        $timeout(function() {
+          $scope.bool = true;
+        });
     $scope.verify(true);
-    
+   
   }
+
   $scope.clicked_false = function(){
     applicationRun();
     $scope.list_items = [
@@ -171,7 +176,12 @@ angular.module('starter', ['ionic'])
         {text:$scope.trueResult,color:"calm"},
         {text:$scope.score,color:"calm"}
         ];
+        $scope.bool = false;
+        $timeout(function() {
+          $scope.bool = true;
+        });
     $scope.verify(false);
+
     
   }
 }])
