@@ -49,53 +49,18 @@
 							True or False?
 						</div>
 
-
-
-
-
 						<div ng-repeat="i in list_items track by $index" class="list list-inset center equation-item">
 							<div class="item item-{{i.color}}">
 								{{i.text}}
 							</div>
 						</div>
-            <!--<div [onload="string"]autoscroll="string"]>
-						<div class="list list-inset center equation-item">
-							<div class="item item-positive">
-								{{firstTerm}}
-							</div>
-						</div>
-						<div class="list list-inset center equation-item">
-							<div class="item item-balanced">
-								{{operationSet}}
-							</div>
-						</div>
-						<div class="list list-inset center equation-item">
-							<div class="item item-positive">
-								{{secondTerm}}
-							</div>
-						</div>
-						<div class="list list-inset center equation-item">
-							<div class="item item-balanced">
-								=
-							</div>
-						</div>
-						<div class="list list-inset center equation-item">
-							<div class="item item-calm">
-								{{trueResult}}
-							</div>
-						</div>
-            </div>
-						<div class="list list-inset center">
-							<div class="item item-calm">
-								{{score}}
-							</div>
-						</div>-->
+            
 					</ion-content>
 				</div>
 				<div class="bar bar-footer">
 					<div class="button-bar">
-						<a class="button button-large button-balanced" ng-click="verify(true)">True</a>
-						<a class="button button-large button-assertive" ng-click="verify(false)">False</a>
+						<a class="button button-large button-balanced" ng-click="clicked_true()">True</a>
+						<a class="button button-large button-assertive" ng-click="clicked_false()">False</a>
 					</div>
 				</div>
 			

@@ -144,11 +144,34 @@ angular.module('starter', ['ionic'])
 
     }
     
-    // $list_items = [$scope.firstTerm,$scope.secondTerm,operationSet,"=",$scope.trueResult];
 
   };
   applicationRun();
-  $scope.clickerino = function(){
-    $scope.list_items.push("a");
+
+  $scope.clicked_true = function(){
+    applicationRun();
+    $scope.list_items = [
+        {text:$scope.firstTerm,color:"positive"},
+        {text:$scope.operationSet,color:"balanced"},
+        {text:$scope.secondTerm,color:"positive"},
+        {text:"=",color:"balanced"},
+        {text:$scope.trueResult,color:"calm"},
+        {text:$scope.score,color:"calm"}
+        ];
+    $scope.verify(true);
+    
+  }
+  $scope.clicked_false = function(){
+    applicationRun();
+    $scope.list_items = [
+        {text:$scope.firstTerm,color:"positive"},
+        {text:$scope.operationSet,color:"balanced"},
+        {text:$scope.secondTerm,color:"positive"},
+        {text:"=",color:"balanced"},
+        {text:$scope.trueResult,color:"calm"},
+        {text:$scope.score,color:"calm"}
+        ];
+    $scope.verify(false);
+    
   }
 }])
