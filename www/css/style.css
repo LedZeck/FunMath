@@ -6,8 +6,8 @@
   text-align: center;
 }
 
-.equation-item{
-   font-size: 1500%;
+.equation-item > div{
+   font-size: 130%;
 }
 .equation-item.ng-move,
 .equation-item.ng-enter{

@@ -33,8 +33,8 @@ angular.module('starter', ['ionic'])
         {text:$scope.operationSet,color:"balanced"},
         {text:$scope.secondTerm,color:"positive"},
         {text:"=",color:"balanced"},
-        {text:$scope.trueResult,color:"calm"},
-        {text:$scope.score,color:"calm"}
+        {text:$scope.trueResult,color:"calm"}
+         
         ];
     });
   function applicationRun() {
@@ -155,8 +155,8 @@ angular.module('starter', ['ionic'])
         {text:$scope.operationSet,color:"balanced"},
         {text:$scope.secondTerm,color:"positive"},
         {text:"=",color:"balanced"},
-        {text:$scope.trueResult,color:"calm"},
-        {text:$scope.score,color:"calm"}
+        {text:$scope.trueResult,color:"calm"}
+       
         ];
         $scope.bool = false;
         $timeout(function() {
@@ -173,8 +173,7 @@ angular.module('starter', ['ionic'])
         {text:$scope.operationSet,color:"balanced"},
         {text:$scope.secondTerm,color:"positive"},
         {text:"=",color:"balanced"},
-        {text:$scope.trueResult,color:"calm"},
-        {text:$scope.score,color:"calm"}
+        {text:$scope.trueResult,color:"calm"}
         ];
         $scope.bool = false;
         $timeout(function() {

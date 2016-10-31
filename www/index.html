@@ -45,16 +45,19 @@
 
 			<div class="row responsive-sm">
 				<ion-content>
+
 					<div class="item center">
 						True or False?
 					</div>
-					
-						<div  ng-if="bool" ng-repeat="i in list_items track by $index" class="list list-inset center equation-item">
-							<div class="item item-{{i.color}}">
-								{{i.text}}
-							</div>
+					<div class="padding-vertical button button-small button-outline button-positive">
+						Score: {{score}}   
+					</div>
+					<div ng-if="bool" ng-repeat="i in list_items track by $index" class="list list-inset center equation-item">
+						<div class="item item-{{i.color}}">
+							{{i.text}}
 						</div>
-					
+					</div>
+
 				</ion-content>
 			</div>
 			<div class="bar bar-footer">
