@@ -42,29 +42,29 @@
 			<h1 class="title">FunMath</h1>
 		</ion-header-bar>
 		<ion-content ng-controller="mathCtrl">
-		
-				<div class="row responsive-sm">
-					<ion-content>
-						<div class="item center">
-							True or False?
-						</div>
 
-						<div ng-repeat="i in list_items track by $index" class="list list-inset center equation-item">
+			<div class="row responsive-sm">
+				<ion-content>
+					<div class="item center">
+						True or False?
+					</div>
+					
+						<div  ng-if="bool" ng-repeat="i in list_items track by $index" class="list list-inset center equation-item">
 							<div class="item item-{{i.color}}">
 								{{i.text}}
 							</div>
 						</div>
-            
-					</ion-content>
+					
+				</ion-content>
+			</div>
+			<div class="bar bar-footer">
+				<div class="button-bar">
+					<a class="button button-large button-balanced" ng-click="clicked_true()">True</a>
+					<a class="button button-large button-assertive" ng-click="clicked_false()">False</a>
 				</div>
-				<div class="bar bar-footer">
-					<div class="button-bar">
-						<a class="button button-large button-balanced" ng-click="clicked_true()">True</a>
-						<a class="button button-large button-assertive" ng-click="clicked_false()">False</a>
-					</div>
-				</div>
-			
-     
+			</div>
+
+
 		</ion-content>
 	</ion-pane>
 </body>
