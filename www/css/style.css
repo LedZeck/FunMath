@@ -5,7 +5,12 @@
 .center{
   text-align: center;
 }
-.equation-animate > *{
+
+.equation-item.ng-enter{
+  -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s; 
+}
+.equation-item.ng-enter-stagger {
   -webkit-animation-delay:200ms;
   animation-delay:200ms;
 
