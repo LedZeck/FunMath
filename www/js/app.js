@@ -24,6 +24,7 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('mathCtrl', ['$scope','$timeout', function ($scope,$timeout) {
+  $scope.was_right=true;
   $scope.bool = true;
   $scope.score = 0;
   $scope.list_items = [];
@@ -55,16 +56,17 @@ angular.module('starter', ['ionic'])
         var choice = viewParam;
         if ((compareParameter == 1) && choice) {
           $scope.score += 1;
-
+          $scope.was_right =true;
         } else if (compareParameter == 1 && choice == false) {
           $scope.score += 0;
-
+          $scope.was_right =false;
         } else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
+          $scope.was_right =true;
 
         } else {
           $scope.score += 0;
-
+          $scope.was_right =false;
         }
       };
     } else if (operation == 2) {
@@ -79,16 +81,18 @@ angular.module('starter', ['ionic'])
         var choice = viewParam;
         if ((compareParameter == 1) && choice) {
           $scope.score += 1;
+          $scope.was_right =true;
 
         } else if (compareParameter == 1 && choice == false) {
           $scope.score += 0;
-
+          $scope.was_right =false;
         } else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
+          $scope.was_right =true;
 
         } else {
           $scope.score += 0;
-
+          $scope.was_right =false;
         }
       };
     } else if (operation == 3) {
@@ -129,16 +133,16 @@ angular.module('starter', ['ionic'])
         var choice = viewParam
         if ((compareParameter == 1) && choice) {
           $scope.score += 1;
-
+          $scope.was_right =true;
         } else if (compareParameter == 1 && choice == false) {
           $scope.score += 0;
-
+          $scope.was_right =false;
         } else if (compareParameter == 2 && choice == false) {
           $scope.score += 1;
-
+          $scope.was_right =true;
         } else {
           $scope.score += 0;
-
+          $scope.was_right =false;
         }
       };
 
@@ -161,8 +165,9 @@ angular.module('starter', ['ionic'])
         $scope.bool = false;
         $timeout(function() {
           $scope.bool = true;
-        });
+        },700);
     $scope.verify(true);
+    console.log($scope.was_right);
    
   }
 
@@ -178,7 +183,7 @@ angular.module('starter', ['ionic'])
         $scope.bool = false;
         $timeout(function() {
           $scope.bool = true;
-        });
+        },700);
     $scope.verify(false);
 
     
